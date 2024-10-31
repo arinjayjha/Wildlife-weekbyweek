@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Quiz</title>
+    <style>
+        /* CSS */
+        body {
+            font-family: Arial, sans-serif;
+            transition: background 0.3s, color 0.3s;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        body.dark-mode {
+            background: #333;
+            color: #f4f4f4;
+        }
+
+        .header {
+            text-align: center;
+            margin: 20px;
+        }
+
+        #toggle-theme {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .week-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .question {
+            margin: 20px 0;
+        }
+
+        .options button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .options button.correct {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .options button.incorrect {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #status {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        #score {
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Wildlife Quiz</h1>
+        <button id="toggle-theme">Toggle Dark/Light Mode</button>
+    </div>
+
+    <div class="week-buttons">
+        <!-- Buttons for each week -->
+        <button onclick="loadWeek(1)">Week 1</button>
+        <button onclick="loadWeek(2)">Week 2</button>
+        <button onclick="loadWeek(3)">Week 3</button>
+        <button onclick="loadWeek(4)">Week 4</button>
+        <button onclick="loadWeek(5)">Week 5</button>
+        <button onclick="loadWeek(6)">Week 6</button>
+        <button onclick="loadWeek(7)">Week 7</button>
+        <button onclick="loadWeek(8)">Week 8</button>
+        <button onclick="loadWeek(9)">Week 9</button>
+        <button onclick="loadWeek(10)">Week 10</button>
+        <button onclick="loadWeek(11)">Week 11</button>
+        <button onclick="loadWeek(12)">Week 12</button>
+    </div>
+
+    <div id="quiz-container">
+        <!-- Questions will be dynamically loaded here -->
+        <div id="status"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
