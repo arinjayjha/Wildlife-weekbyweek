@@ -12,8 +12,7 @@
             transition: background 0.3s, color 0.3s;
             background: #f4f4f4;
             color: #333;
-            margin: 0;
-            padding: 0;
+            position: relative;
         }
 
         body.dark-mode {
@@ -31,26 +30,39 @@
             cursor: pointer;
         }
 
+        .attempt-all-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .attempt-all-btn:hover {
+            background-color: #0056b3;
+        }
+
         .week-buttons {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
             margin: 20px;
         }
 
-        .week-buttons button {
+        button {
             padding: 10px 20px;
             cursor: pointer;
-            flex: 1 1 100px; /* Each button will be at least 100px wide */
-            min-width: 80px;
         }
 
         #quiz-container {
             max-width: 600px;
             margin: 0 auto;
             text-align: center;
-            padding: 0 10px; /* Adds padding for smaller screens */
         }
 
         .question {
@@ -86,33 +98,12 @@
             font-weight: bold;
             margin: 20px 0;
         }
-
-        /* Media query for mobile screens */
-        @media (max-width: 600px) {
-            #toggle-theme {
-                padding: 6px 12px;
-                font-size: 14px;
-            }
-
-            .week-buttons button {
-                flex: 1 1 30%; /* Allow three buttons per row on small screens */
-                padding: 8px 12px;
-                font-size: 14px;
-            }
-
-            .header h1 {
-                font-size: 24px;
-            }
-
-            .options button {
-                font-size: 14px;
-                padding: 8px;
-            }
-        }
     </style>
 </head>
 
 <body>
+    <button class="attempt-all-btn" onclick="window.location.href='https://wildlife-quiz-one.vercel.app/'">Attempt All Weeks Quiz</button>
+
     <div class="header">
         <h1>Wildlife Quiz</h1>
         <button id="toggle-theme">Toggle Dark/Light Mode</button>
